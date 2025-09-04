@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+        input,
+        textarea {
+            width: 100%;
+            padding: 5px 10px;
+            margin: 10px 0px;
+        }
+
+        button {
+            width: 49%;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 500px;">
+        <form action="">
+            <!-- personal info -->
+            <p> <strong>Personal information</strong></p>
+            <div>
+                <label for="firstName">First Nmae</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div>
+                <label for="lastName">Last Nmae</label>
+                <input type="text" name="lastNamee" id="firstName">
+            </div>
+            <div>
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="tel" name="mobileNumber" id="mobileNumber" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <!-- Job Details -->
+            <div>
+                <label for="position"><b>Position Applied For:</b></label>
+                <input type="text" id="position" name="position">
+            </div>
+            <div>
+                <label for="experience">Years of Experience:</label>
+                <input type="range" id="experience" name="experience" min="1" max="10" step="1" value="3">
+            </div>
+            <div>
+                <label for="cover">Why should we hire you?</label>
+                <textarea name="cover" id="cover"></textarea>
+            </div>
+            <div>
+                <label for="uploadCv">Upload your CV</label>
+                <input type="file" name="uploadCv" id="uploadCv"></input>
+            </div>
+            <div>
+                <button type="submit">Apply Now</button>
+            </div>
+
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>

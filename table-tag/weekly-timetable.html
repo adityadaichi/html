@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable using HTML Table</title>
+    <style>
+        th,
+        td,
+        caption {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" style="border-collapse: collapse;">
+        <caption>School Timetable</caption>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Period 1</th>
+                <th>Period 2</th>
+                <th>Period 3</th>
+                <th>Lunch</th>
+                <th>Period 4</th>
+                <th>Period 5</th>
+                <th>Period 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Math</td>
+                <td>English</td>
+                <td>Physics</td>
+                <td rowspan="7">Lunch Time</td>
+                <td>Hindi</td>
+                <td>Bengali</td>
+                <td>History</td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td colspan="2">Math</td>
+                <td>Physics</td>
+                <td>Hindi</td>
+                <td colspan="2">History</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Physics</td>
+                <td colspan="2">Math</td>
+                <td>Hindi</td>
+                <td colspan="2">History</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td colspan="7">off day</td>
+            </tr>
+            <tr>
+                <td>Thusday</td>
+                <td>Math</td>
+                <td>English</td>
+                <td>Physics</td>
+                <td colspan="3">Hindi</td>
+
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Bengali</td>
+                <td colspan="2" rowspan="2">Physics</td>
+                <td>History</td>
+                <td>Math</td>
+                <td rowspan="2">History</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>History</td>
+                <td>Physics</td>
+                <td>Bengali</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8">
+                    sunday off for special call reach out to teach directly via email " <a
+                        href="mailto:email@teacher.com">email@teacher.com</a> or <a href="tel:9999999999">9999999999</a>
+                    "
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

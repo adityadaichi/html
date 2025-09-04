@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+</head>
+<style>
+    input {
+        width: 100%;
+        padding: 5px 10px;
+        margin: 10px 0px;
+    }
+
+    button {
+        width: 49%;
+    }
+</style>
+
+<body>
+    <!-- Registration div width by stype stribute 300px -->
+    <div style="width: 300px;">
+        <h3>Registration</h3>
+        <form action="">
+            <div>
+                <label for="firstName">First Nmae</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div>
+                <label for="lastName">Last Nmae</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+            <div>
+                <label for="email">Email id</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="tel" name="mobileNumber" id="mobileNumber">
+            </div>
+            <div>
+                <label for="createpassword">Create Password</label>
+                <input type="password" name="createpassword" id="createpassword">
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">
+            </div>
+            <button type="submit">Create Account</button> <button type="reset">Reset Details</button>
+        </form>
+    </div>
+    <!-- login div width by stype stribute 300px -->
+    <div style="width: 300px;">
+        <h3>login</h3>
+        <form action="">
+            <div>
+                <label for="loginemail">Email id</label>
+                <input type="email" name="loginemail" id="loginemail">
+            </div>
+
+            <div>
+                <label for="loginPassword">Password</label>
+                <input type="password" name="loginPassword" id="loginPassword">
+            </div>
+            <div>
+                <button type="submit">LogIn</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
