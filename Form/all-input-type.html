@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All form input type</title>
     <style>
         input {
-            width: 100%;
+
             padding: 5px 10px;
             margin: 10px 0px;
         }
@@ -15,121 +15,264 @@
         button {
             width: 49%;
         }
+
+        th,
+        td,
+        caption {
+            padding: 10px 15px;
+        }
     </style>
 </head>
 
 <body>
-    <div style="width: 500px;">
+    <div style="width: 1000px;">
         <form>
-            <!-- 1. TEXT INPUT type="text"    creates a single-line text box for user input. placeholder="Enter your name"    shows hint text until user types something. maxlength="20"    limits the input to a maximum of 20 characters.-->
-            <label>1. Text:
-                <input type="text" placeholder="Enter your name" maxlength="20">
-            </label>
+            <p>TEXT INPUT type="text" creates a single-line text box for user input. placeholder="Enter your name"
+                shows hint text until user types. maxlength="20" limits the input length.</p>
+            <label for="text">Text: </label>
+            <input type="text" id="text" name="text" maxlength="20">
 
-            <!-- 2. PASSWORD INPUT type="password"    hides typed characters with dots/bullets. minlength="6"    user must type at least 6 characters. maxlength="12"    user cannot type more than 12 characters. -->
-            <label>2. Password:
-                <input type="password" placeholder="Enter password" minlength="6" maxlength="12">
-            </label>
 
-            <!-- 3. EMAIL INPUT type="email"    requires input in valid email format (e.g., user@example.com). multiple    allows entering more than one email address separated by commas. placeholder="Enter email"    hint text shown when empty.-->
-            <label>3. Email:
-                <input type="email" placeholder="Enter email" multiple>
-            </label>
+            <p>PASSWORD INPUT type="password" hides typed characters with dots or asterisks.</p>
+            <label for="password">2. Password: </label>
+            <input type="password" id="password" name="password">
 
-            <!-- 4. NUMBER INPUT type="number"    creates a box with arrows to increase/decrease numeric value.min="1"    the smallest number allowed is 1. max="10"    the largest number allowed is 10. step="2"    values change in steps of 2 (1,3,5,7,9). value="4"    the default value displayed is 4.-->
-            <label>4. Number:
-                <input type="number" min="1" max="10" step="2" value="4">
-            </label>
 
-            <!-- 5. RANGE INPUT type="range"    creates a slider control.min="0"    the slider starts from 0.max="100"    the slider goes up to 100 step="10"    slider moves in intervals of 10. value="50"    initial slider position is set at 50.-->
-            <label>5. Range:
-                <input type="range" min="0" max="100" step="10" value="50">
-            </label>
+            <p>EMAIL INPUT type="email" requires a valid email format (e.g., user@example.com).</p>
+            <label for="email">3. Email: </label>
+            <input type="email" id="email" name="email">
 
-            <!-- 6. CHECKBOX type="checkbox"    allows multiple selections. name="subject"    groups related checkboxes together value="math"    if checked, "math" will be sent to the serverchecked    this option is selected by default. -->
-            <label><input type="checkbox" name="subject" value="math" checked> Math</label>
-            <label><input type="checkbox" name="subject" value="science"> Science</label>
 
-            <!-- 7. RADIO type="radio"    allows only one selection in a group.name="gender"    radios with the same name belong to one group.value="male"    if this option is selected, "male" will be sent.checked    sets Female as the default selected option.-->
-            <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="female" checked> Female</label>
+            <p>NUMBER INPUT type="number" allows only numeric values. min, max, and step control the range.</p>
+            <label for="number">4. Number: </label>
+            <input type="number" id="number" name="number" min="1" max="10" step="1">
 
-            <!-- 8. FILE INPUT type="file"    opens file picker dialog.accept="image/*"    only allows image files (jpg, png, etc.). multiple    allows selecting multiple files at once. -->
-            <label>File:
-                <input type="file" accept="image/*" multiple>
-            </label>
 
-            <!-- 9. HIDDEN INPUT type="hidden"    not shown on the page but sends data with the form. value="12345"    this hidden value will be sent to the server.-->
-            <label>Hidden (not visible):
-                <input type="hidden" name="userid" value="12345">
-            </label>
+            <p>TEL INPUT type="tel" is for telephone numbers (no validation by default).</p>
+            <label for="tel">5. Telephone: </label>
+            <input type="tel" id="tel" name="tel" placeholder="123-456-7890">
 
-            <!-- 10. SUBMIT BUTTON type="submit"    submits the form to the server. value="Register"    the button text displayed is "Register".-->
-            <label>Submit:
-                <input type="submit" value="Register">
-            </label>
 
-            <!-- 11. RESET BUTTON type="reset"    clears all inputs in the form back to default values. value="Clear Form"    the button text displayed is "Clear Form".-->
-            <label>Reset:
-                <input type="reset" value="Clear Form">
-            </label>
+            <p>URL INPUT type="url" requires a valid URL format (e.g., https://example.com).</p>
+            <label for="url">6. URL: </label>
+            <input type="url" id="url" name="url">
 
-            <!-- 12. BUTTON type="button"    clickable button with no default action. value="Click Me"    the button label is "Click Me". onclick="alert(...)"    runs JavaScript when clicked.-->
-            <label>Button:
-                <input type="button" value="Click Me" onclick="alert('Button clicked!')">
-            </label>
 
-            <!-- 13. DATE INPUT type="date"    shows a date picker. min="2025-01-01"    earliest selectable date is Jan 1, 2025. max="2025-12-31"    latest selectable date is Dec 31, 2025. -->
-            <label>Date:
-                <input type="date" min="2025-01-01" max="2025-12-31">
-            </label>
+            <p>SEARCH INPUT type="search" is a single-line text box with optimized styling for search.</p>
+            <label for="search">7. Search: </label>
+            <input type="search" id="search" name="search">
 
-            <!-- 14. DATETIME-LOCAL INPUT type="datetime-local"    date & time picker (without timezone). min/max    restrict allowed range.-->
-            <label>Datetime-local:
-                <input type="datetime-local" min="2025-01-01T09:00" max="2025-12-31T18:00">
-            </label>
 
-            <!-- 15. MONTH INPUT type="month"    lets user select month and year. value="2025-09"    default month is September 2025.-->
-            <label>Month:
-                <input type="month" value="2025-09">
-            </label>
+            <p>DATE INPUT type="date" provides a date picker. </p>
+            <label for="date">8. Date: </label>
+            <input type="date" id="date" name="date">
 
-            <!-- 16. WEEK INPUT  type="week"    lets user select a specific week of a year. value="2025-W36"    default is week 36 of 2025.-->
-            <label>Week:
-                <input type="week" value="2025-W36">
-            </label>
 
-            <!-- 17. TIME INPUT type="time"    lets user select hours and minutes.min="09:00"    earliest time allowed is 9:00 AM.max="18:00"    latest time allowed is 6:00 PM. step="900"    step is 900 seconds = 15 minutes.-->
-            <label>Time:
-                <input type="time" min="09:00" max="18:00" step="900">
-            </label>
+            <p>TIME INPUT type="time" provides a time picker.</p>
+            <label for="time">9. Time: </label>
+            <input type="time" id="time" name="time">
 
-            <!-- 18. COLOR INPUT type="color"    opens a color picker.value="#ff0000"    default color is red.-->
-            <label>Color:
-                <input type="color" value="#ff0000">
-            </label>
 
-            <!-- 19. SEARCH INPUT  type="search"    similar to text but optimized for search fields.placeholder="Search here..."    hint shown in the box.-->
-            <label>Search:
-                <input type="search" placeholder="Search here...">
-            </label>
+            <p>DATETIME-LOCAL INPUT type="datetime-local" lets users pick date and time (no timezone). </p>
+            <label for="datetime">10. Date & Time: </label>
+            <input type="datetime-local" id="datetime" name="datetime">
 
-            <!-- 20. TEL INPUT type="tel"    input field for phone numbers.pattern="[0-9]{10}"    requires exactly 10 digits.placeholder="Enter 10-digit phone"    hint text for expected format.-->
-            <label>Telephone:
-                <input type="tel" pattern="[0-9]{10}" placeholder="Enter 10-digit phone">
-            </label>
 
-            <!-- 21. URL INPUT type="url"    input must be a valid URL (http:// or https://). placeholder="https:// a url only domain"    shows a sample format.-->
-            <label>URL:
-                <input type="url" placeholder="https://example.com">
-            </label>
+            <p>MONTH INPUT type="month" lets users pick month and year. </p>
+            <label for="month">11. Month: </label>
+            <input type="month" id="month" name="month">
 
-            <!-- 22. IMAGE INPUT type="image"    displays an image that acts as a submit button. src    the image file to display. alt    alternative text if image fails to load. width    sets width of the image in pixels. -->
-            <label>Image Submit:
-                <input type="image" src="/Assignment/Aug_28_25/assets/home-image1.png" alt="Submit" width="10">
-            </label>
+
+            <p>WEEK INPUT type="week" lets users pick a week of a year</p>
+            <label for="week">12. Week: </label>
+            <input type="week" id="week" name="week">
+
+
+            <p>COLOR INPUT type="color" shows a color picker. </p>
+            <label for="color">13. Color: </label>
+            <input type="color" id="color" name="color">
+
+
+            <p>RANGE INPUT type="range" is a slider for numeric values. min, max, and step control movement. </p>
+            <label for="range">14. Range: </label>
+            <input type="range" id="range" name="range" min="0" max="100" step="5">
+
+
+            <p>CHECKBOX INPUT type="checkbox" allows multiple selections.</p>
+            <label for="checkbox">15. Checkbox: </label>
+            <input type="checkbox" id="checkbox" name="checkbox">
+
+
+            <p>RADIO INPUT type="radio" allows single selection among options with same name. </p>
+            <label for="radio1">16. Radio Option 1: </label>
+            <input type="radio" id="radio1" name="radioGroup" value="option1">
+            <label for="radio2">Radio Option 2: </label>
+            <input type="radio" id="radio2" name="radioGroup" value="option2">
+
+
+            <p>FILE INPUT type="file" lets user upload files. accept restricts file types. multiple allows multiple
+                uploads.</p>
+            <label for="file">17. File: </label>
+            <input type="file" id="file" name="file" accept=".jpg,.png" multiple>
+
+
+            <p>HIDDEN INPUT type="hidden" stores data not visible to the user.</p>
+            <label for="hidden">18. Hidden (invisible): </label>
+            <input type="hidden" id="hidden" name="hidden" value="secret">
+
+
+            <p>SUBMIT BUTTON type="submit" sends form data to server.</p>
+            <label for="submit">19. Submit: </label>
+            <input type="submit" id="submit" name="submit" value="Submit">
+
+
+            <p>RESET BUTTON ype="reset" clears all form inputs.</p>
+            <label for="reset">20. Reset: </label>
+            <input type="reset" id="reset" name="reset" value="Reset">
+
+
+            <p>BUTTONtype="button" is a general button (no default behavior).</p>
+            <label for="button">21. Button: </label>
+            <input type="button" id="button" name="button" value="Click Me">
         </form>
     </div>
+    <!-- input type in table -->
+    <table border="1" style="border-collapse: collapse;">
+        <caption>List of types</caption>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Attributes</th>
+            </tr>
+        <tbody>
+            <!-- 1. TEXT INPUT -->
+            <tr>
+                <td>text</td>
+                <td>id="text" name="text" maxlength="20"</td>
+            </tr>
+
+            <!-- 2. PASSWORD INPUT -->
+            <tr>
+                <td>password</td>
+                <td>id="password" name="password"</td>
+            </tr>
+
+            <!-- 3. EMAIL INPUT -->
+            <tr>
+                <td>email</td>
+                <td>id="email" name="email"</td>
+            </tr>
+
+            <!-- 4. NUMBER INPUT -->
+            <tr>
+                <td>number</td>
+                <td>id="number" name="number" min="1" max="10" step="1"</td>
+            </tr>
+
+            <!-- 5. TEL INPUT -->
+            <tr>
+                <td>tel</td>
+                <td>id="tel" name="tel" placeholder="123-456-7890"</td>
+            </tr>
+
+            <!-- 6. URL INPUT -->
+            <tr>
+                <td>url</td>
+                <td>id="url" name="url"</td>
+            </tr>
+
+            <!-- 7. SEARCH INPUT -->
+            <tr>
+                <td>search</td>
+                <td>id="search" name="search"</td>
+            </tr>
+
+            <!-- 8. DATE INPUT -->
+            <tr>
+                <td>date</td>
+                <td>id="date" name="date"</td>
+            </tr>
+
+            <!-- 9. TIME INPUT -->
+            <tr>
+                <td>time</td>
+                <td>id="time" name="time"</td>
+            </tr>
+
+            <!-- 10. DATETIME-LOCAL INPUT -->
+            <tr>
+                <td>datetime-local</td>
+                <td>id="datetime" name="datetime"</td>
+            </tr>
+
+            <!-- 11. MONTH INPUT -->
+            <tr>
+                <td>month</td>
+                <td>id="month" name="month"</td>
+            </tr>
+
+            <!-- 12. WEEK INPUT -->
+            <tr>
+                <td>week</td>
+                <td>id="week" name="week"</td>
+            </tr>
+
+            <!-- 13. COLOR INPUT -->
+            <tr>
+                <td>color</td>
+                <td>id="color" name="color"</td>
+            </tr>
+
+            <!-- 14. RANGE INPUT -->
+            <tr>
+                <td>range</td>
+                <td>id="range" name="range" min="0" max="100" step="5"</td>
+            </tr>
+
+            <!-- 15. CHECKBOX INPUT -->
+            <tr>
+                <td>checkbox</td>
+                <td>id="checkbox" name="checkbox"</td>
+            </tr>
+
+            <!-- 16. RADIO INPUT -->
+            <tr>
+                <td>radio</td>
+                <td>id="radio1" name="radioGroup" value="option1"</td>
+            </tr>
+
+            <!-- 17. FILE INPUT -->
+            <tr>
+                <td>file</td>
+                <td>id="file" name="file" accept=".jpg,.png" multiple</td>
+            </tr>
+
+            <!-- 18. HIDDEN INPUT -->
+            <tr>
+                <td>hidden</td>
+                <td>id="hidden" name="hidden" value="secret"</td>
+            </tr>
+
+            <!-- 19. SUBMIT BUTTON -->
+            <tr>
+                <td>submit</td>
+                <td>id="submit" name="submit" value="Submit"</td>
+            </tr>
+
+            <!-- 20. RESET BUTTON -->
+            <tr>
+                <td>reset</td>
+                <td>id="reset" name="reset" value="Reset"</td>
+            </tr>
+
+            <!-- 21. BUTTON -->
+            <tr>
+                <td>button</td>
+                <td>id="button" name="button" value="Click Me"</td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
 </body>
 
 </html>
