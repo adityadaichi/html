@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors Demonstration</title>
+    <!-- Linking External Css -->
+    <link rel="stylesheet" href="external-file.css">
+</head>
+
+<body>
+    <!-- Universal Selector Example -->
+    <header>
+        <h1>Welcome To Css Selector Demo</h1>
+    </header>
+
+    <!-- Element Selector Example -->
+    <section>
+        <p>This Paragraph Shows Styling Applied To All P Tags.</p>
+    </section>
+
+    <!-- Class Selector Example -->
+    <div class="card">
+        <h2>Card Title</h2>
+        <p>This Box Uses Class Selector.</p>
+    </div>
+
+    <!-- Id Selector Example -->
+    <div id="special-box">
+        <p>This Box Uses Id Selector.</p>
+    </div>
+
+    <!-- Group Selector Example -->
+    <nav>
+        <h3>Navigation Menu</h3>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <a href="#">Click Here</a>
+    </nav>
+
+    <!-- Descendant Selector Example -->
+    <article class="news">
+        <p>This Paragraph Is Inside .news Article >> Styled Using Descendant Selector.</p>
+    </article>
+
+    <!-- Child Selector Example -->
+    <ol>
+        <li>Main Item</li>
+        <li>
+            Sub Items:
+            <ol>
+                <li>Sub Item A</li>
+                <li>Sub Item B</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- Adjacent Sibling Selector Example -->
+    <h2>Title</h2>
+    <p>This Paragraph Immediately After H2 Is Styled.</p>
+    <p>This Paragraph Is Not Adjacent.</p>
+
+    <!-- General Sibling Selector Example -->
+    <h2>Another Title</h2>
+    <p>This Paragraph Is A Sibling After H2.</p>
+    <p>This Paragraph Is Also Styled By General Sibling Selector.</p>
+
+    <!-- Attribute Selector Example -->
+    <form>
+        <label>Username:</label>
+        <input type="text" placeholder="Enter Username"> <br> <br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password"> <br> <br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter Email">
+    </form>
+
+
+    <h1>CSS Specificity Priority</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Priority</th>
+                <th>Selector Type</th>
+                <th>Example</th>
+                <th>Explanation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Highest</td>
+                <td>Inline Styles</td>
+                <td>&lt;p style="color:#ff0000;"&gt;Text&lt;/p&gt;</td>
+                <td>Directly inside the HTML element → always wins.</td>
+            </tr>
+            <tr>
+                <td>2nd</td>
+                <td>ID Selector</td>
+                <td>#demo { color:#0000ff; }</td>
+                <td>Targets a single unique element by ID.</td>
+            </tr>
+            <tr>
+                <td>3rd</td>
+                <td>Class, Attribute, Pseudo-class</td>
+                <td>.card {} <br> input[type="text"] {} <br> a:hover {}</td>
+                <td>More specific than tags, can apply to many elements.</td>
+            </tr>
+            <tr>
+                <td>4th</td>
+                <td>Element, Pseudo-element</td>
+                <td>p {} <br> h1 {} <br> p::first-line {}</td>
+                <td>Styles by tag type.</td>
+            </tr>
+            <tr>
+                <td>Lowest</td>
+                <td>Universal Selector</td>
+                <td>* { margin:0; }</td>
+                <td>Applies to all elements, lowest priority.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* selectors  */
+/* univertial selectors - priority most low*/
+* {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+::selection {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* element or type or tag selector */
+h1 {
+    color: red;
+    font-size: 100px;
+    margin: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* classs selector */
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    padding: 20px;
+    border: #ff0000 solid 10px;
+}
+
+/* #id selector */
+
+#test-id {
+    width: 90%;
+}
+
+/* group selector */
+h1,
+p,
+li,
+a {
+    color: rgb(0, 0, 0);
+}
+
+/* descendant selector */
+.divclass p {
+    color: blue;
+}
+
+/* child selector */
+ul>li {
+    color: maroon;
+}
+
+/* adjacent sibling selector */
+h2+p {
+    text-transform: uppercase;
+}
+
+/* genrel sibling selector */
+h2+p {
+    text-transform: uppercase;
+}
+
+/* attribite selector */
+input[type="text"] {
+    width: 100%;
+}
+
+/* sudo element */
+.psudo-h1-test:hover {
+    color: #ff0000;
+
+}
+
+.psudo-p-test:hover {
+    text-transform: capitalize;
+    color: rgb(4, 99, 99);
+}
+
+.form-input-focus input:focus {
+    color: #ff0000;
+}
+
+.psudo-element-select h2::first-letter {
+    font-size: 100px;
+}
+
+/* psudo element */
+.psudo-element-select h2::before {
+    content: "12 ";
+}
+
+.psudo-element-select h2::after {
+    content: " !end";
+}

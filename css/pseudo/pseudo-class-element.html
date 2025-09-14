@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes And Pseudo Elements</title>
+    <link rel="stylesheet" href="psudo-selector.css">
+</head>
+
+<body>
+
+    <h1>Pseudo Class Selectors</h1>
+
+    <!-- Link Hover -->
+    <a href="#">Hover Over Me</a>
+
+    <!-- Link Active -->
+    <a href="#">Click Me</a>
+
+    <!-- First Child -->
+    <ul>
+        <li>First Child Item</li>
+        <li>Second Child Item</li>
+        <li>Third Child Item</li>
+    </ul>
+
+    <!-- Last Child -->
+    <ul>
+        <li>First</li>
+        <li>Middle</li>
+        <li>Last Child</li>
+    </ul>
+
+    <!-- nth-child -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+
+    <!-- Disabled -->
+    <input type="text" placeholder="Enabled Input">
+    <input type="text" placeholder="Disabled Input" disabled>
+
+    <!-- Checked -->
+    <label><input type="checkbox" checked> Checked Box</label>
+    <label><input type="checkbox"> Unchecked Box</label>
+
+    <!-- Focus -->
+    <input type="text" placeholder="Focus on me">
+
+    <h1>Pseudo Element Selectors</h1>
+
+    <!-- before -->
+    <p class="before-example">This paragraph uses ::before pseudo-element.</p>
+
+    <!-- after -->
+    <p class="after-example">This paragraph uses ::after pseudo-element.</p>
+
+    <!-- first-letter -->
+    <p class="first-letter-example">This paragraph uses ::first-letter pseudo-element.</p>
+
+    <!-- first-line -->
+    <p class="first-line-example">This paragraph uses ::first-line pseudo-element. It is a long sentence to show the
+        effect.</p>
+
+    <!-- selection -->
+    <p class="selection-example">Try selecting this text to see ::selection effect.</p>
+    <hr>
+    <h3>
+        Pseudo-classes: :hover, :active, :first-child, :last-child, :nth-child(), :disabled, :checked, :focus.
+        <br>
+        Pseudo-elements: ::before, ::after, ::first-letter, ::first-line, ::selection.
+    </h3>
+</body>
+
+</html>

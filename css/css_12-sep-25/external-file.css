@@ -1,0 +1,105 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Element Selector */
+h1 {
+    color: #ff6600;
+    font-size: 60px;
+    margin: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #333333;
+}
+
+/* Class Selector */
+.card {
+    border: 2px solid #0099ff;
+    padding: 15px;
+    width: 250px;
+    margin: 15px 0;
+}
+
+/* Id Selector */
+#special-box {
+    border: 3px solid #ff0000;
+    padding: 15px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Group Selector */
+h3,
+li,
+a {
+    color: #006600;
+}
+
+/* Descendant Selector */
+.news p {
+    color: #0000ff;
+    font-style: italic;
+}
+
+/* Child Selector */
+ol>li {
+    color: #800080;
+    font-weight: bold;
+}
+
+/* Adjacent Sibling Selector */
+h2+p {
+    text-transform: uppercase;
+}
+
+/* General Sibling Selector */
+h2~p {
+    text-decoration: underline;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    border: 2px solid #0000ff;
+    padding: 5px;
+    margin: 5px 0;
+    width: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+thead {
+    color: #000000;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #06a270;
+}

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Pseudo Class Examples */
+
+/* :hover → applies style when the mouse pointer is over the element */
+a:hover {
+    color: #ffffff;
+    background-color: #007bff;
+    /* changes background on hover */
+    padding: 2px 6px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* :active → applies style when the element is being clicked */
+a:active {
+    color: #ff0000;
+    /* text turns red while clicking */
+}
+
+/* :first-child → targets the first child element of its parent */
+ul li:first-child {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* :last-child → targets the last child element of its parent */
+ul li:last-child {
+    color: #006600;
+    font-style: italic;
+}
+
+/* :nth-child(n) → targets element based on its position among siblings */
+ol li:nth-child(2n) {
+    background-color: #a07171;
+    /* highlights every 2nd item */
+}
+
+/* :disabled → targets form elements that are disabled */
+input:disabled {
+    background-color: #fc7373;
+    /* gray background for disabled input */
+}
+
+/* :checked → targets checkboxes or radio buttons that are checked */
+input:checked {
+    accent-color: #7b736d;
+    /* changes checkbox color */
+}
+
+/* :focus → applies style when an element has focus (cursor in input) */
+input:focus {
+    outline: 2px solid #86aad0;
+    background-color: #4b95b8;
+    /* highlight input on focus */
+}
+
+/* Pseudo Element Examples */
+
+/* ::before → inserts content before the element's actual content */
+.before-example::before {
+    content: "200 ";
+    /* adds a star before the paragraph */
+    color: #8e672d;
+    font-weight: bold;
+}
+
+/* ::after → inserts content after the element's actual content */
+.after-example::after {
+    content: " 100";
+    /* adds sparkles after the paragraph */
+    color: #b348b3;
+    font-weight: bold;
+}
+
+/* ::first-letter → targets the first letter of the text inside the element */
+.first-letter-example::first-letter {
+    font-size: 2em;
+    color: #8f5b5b;
+    font-weight: bold;
+    /* makes the first letter stand out */
+}
+
+/* ::first-line → targets the first line of text inside the element */
+.first-line-example::first-line {
+    font-weight: bold;
+    color: #0066cc;
+    /* styles only the first line */
+}
+
+/* ::selection → styles the part of the text selected by the user */
+.selection-example::selection {
+    background-color: #ffcc00;
+    /* highlight color when text is selected */
+    color: #000000;
+    /* text color of selected text */
+}

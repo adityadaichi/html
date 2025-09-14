@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+}
+
+/* color */
+.text-formating1 {
+    color: rgb(120, 168, 134);
+}
+
+/* font-size */
+.text-formating2 {
+    font-size: 20px;
+}
+
+/* font-weight */
+.text-formating3 {
+    font-weight: 600;
+}
+
+/* font-style */
+.text-formating4
+
+/* font-family */
+.text-formating5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* font-variant */
+.text-formating6 {
+    font-variant: initial;
+}
+
+/* text alignment, left, right, center, justifyed */
+.text-formating7 {
+    text-align: left;
+    /* by defoult */
+}
+
+.text-formating8 {
+    text-align: right;
+}
+
+.text-formating9 {
+    text-align: center;
+}
+
+.text-formating10 {
+    font-size: 30px;
+    text-align: justify;
+    /* text intent */
+    text-indent: 100px;
+    /* letter spacting */
+    letter-spacing: 2px;
+    /* word spacting */
+    word-spacing: 1px;
+    /* lign height */
+    line-height: 1.5;
+    /* text decoration */
+    text-decoration: underline;
+    text-decoration-color: red;
+    /* text transfrom */
+    text-transform: lowercase
+}
+
+.text-formating10::first-letter {
+    font-size: 48px;
+}
