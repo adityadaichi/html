@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============Reset list style for <ul> menu s================= */
+.menu {
+    list-style: none;
+    /* Removes default bullets 
+    we reset all three list-style properties:
+    list-style-type: none; → removes bullets/numbers.
+    list-style-image: none; → makes sure no custom bullet icons appear.
+    list-style-position: outside; → resets the marker positioning.*/
+    margin: 0;
+    /* Removes browser default margin */
+    padding: 0;
+    /* Removes browser default padding */
+    display: flex;
+    /* Puts menu items in a horizontal row */
+    background: #a64040;
+    /* Dark background for navbar */
+}
+
+/* ============================= */
+/* Top-level <li> items in menu  */
+/* ============================= */
+.menu>li {
+    position: relative;
+    /* Makes each <li> a "reference" for absolute children (dropdowns) */
+}
+
+/* ============================= */
+/* Top-level <a> links           */
+/* ============================= */
+.menu>li>a {
+    color: #fff;
+    /* White text */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 12px 20px;
+    /* Spacing around link */
+    display: block;
+    /* Makes the whole padded area clickable */
+}
+
+/* Hover effect for main links */
+.menu>li>a:hover {
+    background: #444;
+    /* Slightly lighter background */
+}
+
+/* ============================= */
+/* Dropdown menu styles          */
+/* ============================= */
+.dropdown {
+    list-style: none;
+    /* No bullets */
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    /* Positions dropdown relative to parent <li> */
+    top: 100%;
+    /* Places it directly below the parent <a> */
+    left: 0;
+    /* Aligns left edge */
+    background: #fff;
+    /* White background */
+    min-width: 180px;
+    /* At least this wide */
+    display: none;
+    /* Hidden by default */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    z-index: 1000;
+    /* Keeps it above other content */
+}
+
+/* Dropdown links */
+.dropdown li a {
+    color: #333;
+    /* Dark text */
+    text-decoration: none;
+    display: block;
+    /* Entire row clickable */
+    padding: 10px 15px;
+    /* Spacing inside dropdown */
+}
+
+/* Hover effect for dropdown links */
+.dropdown li a:hover {
+    background: #f2f2f2;
+    /* Light gray on hover */
+}
+
+/* ============================= */
+/* Show dropdown on hover        */
+/* ============================= */
+.has-dropdown:hover .dropdown {
+    display: block;
+    /* When parent <li> is hovered, show dropdown */
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Structure (Desktop Mega Menu)</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav> <!-- Semantic tag for navigation section -->
+        <ul class="menu"> <!-- Unordered list for menu items, class="menu" for styling -->
+
+            <!-- Simple link -->
+            <li><a href="#">Home</a></li>
+
+            <!-- Menu item that has a mega menu -->
+            <li class="has-mega"> <!-- Class used to show mega menu on hover -->
+                <a href="#">Products</a>
+
+                <!-- Mega Menu Panel -->
+                <div class="mega-menu"> <!-- Hidden by default, shown on hover -->
+
+                    <!-- Column 1 -->
+                    <div class="mega-column"> <!-- Each column inside mega menu -->
+                        <h3>Electronics</h3> <!-- Section heading -->
+                        <ul> <!-- Nested list of links -->
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Mobiles</a></li>
+                            <li><a href="#">Cameras</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="mega-column">
+                        <h3>Clothing</h3>
+                        <ul>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="mega-column">
+                        <h3>Featured</h3>
+                        <!-- Placeholder image for demo -->
+                        <img src="#" alt="Sale Banner">
+                    </div>
+
+                </div> <!-- End mega menu -->
+            </li>
+
+            <!-- More simple links -->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

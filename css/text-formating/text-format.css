@@ -9,7 +9,6 @@ body {
     margin: 20px;
 }
 
-/* FONT PROPERTIES */
 .font-family {
     font-family: Arial, sans-serif;
 }
@@ -34,7 +33,7 @@ body {
     font: italic small-caps bold 20px/1.5 'Times New Roman', serif;
 }
 
-/* TEXT APPEARANCE */
+
 .color {
     color: #FF5733;
 }
@@ -63,7 +62,6 @@ body {
     line-height: 2;
 }
 
-/* TEXT WRAPPING & OVERFLOW */
 .white-space {
     white-space: nowrap;
     overflow: hidden;
@@ -91,12 +89,10 @@ body {
     border: 1px solid #000;
 }
 
-/* TEXT SHADOW */
 .text-shadow {
     text-shadow: 2px 2px 5px gray;
 }
 
-/* TEXT INDENT & TAB SIZE */
 .text-indent {
     text-indent: 50px;
 }
@@ -105,7 +101,7 @@ body {
     tab-size: 8;
 }
 
-/* ADVANCED TEXT DECORATION */
+
 .text-decoration-advanced {
     text-decoration-line: underline overline;
     text-decoration-style: wavy;
@@ -118,7 +114,6 @@ body {
     text-emphasis: filled dot red;
 }
 
-/* LOGICAL & MISC TEXT PROPERTIES */
 .text-justify {
     text-align: justify;
     text-justify: inter-word;

@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Simple clean font */
+    background: #f5f5f5;
+    /* Light background */
+}
+
+.menu {
+    list-style: none;
+    /* Remove bullets from nav list */
+    display: flex;
+    /* Horizontal menu */
+}
+
+.menu>li {
+    position: relative;
+    /* So mega menu is positioned relative to each item 
+    1. What Does position: relative; Do?
+    By default, every element has position: static; → meaning it just follows the normal document flow.
+    When you set position: relative;:
+    The element still stays in normal flow (doesn’t move out).
+    But it now becomes a "positioning context" (also called containing block) for any child elements with position: absolute;.
+    You can also move it using top, left, right, bottom. (If you don’t move it, it looks the same, but still acts as a reference.)
+
+    → mean's each <li> in the menu will serve as the reference for its dropdown (the .mega-menu inside it). */
+}
+
+.menu a {
+    color: #000000;
+    /* White text */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 10px 15px;
+    /* Bigger clickable area */
+    display: block;
+    /* Entire padded area is clickable */
+}
+
+/* ======== Mega Menu Panel - megamunu block Styles =========== */
+.mega-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Positioned relative to parent <li> 
+    1. What Does position: absolute; Do?
+    An element with position: absolute; is removed from normal flow (it won’t push siblings down).
+    Instead, it is positioned relative to the nearest ancestor that has position: relative; (or absolute, or fixed, or sticky).
+    If no such ancestor exists, it positions itself relative to the entire <html> (the page).
+
+    → means the mega menu will “float” out of normal flow and be placed just below (top:100%) and aligned to the left (left:0) of its parent <li>.
+
+    2. The Relationship
+    .menu > li { position: relative; }
+    makes each menu item a positioning reference.
+    .mega-menu { position: absolute; }
+    uses that reference to know where to appear.
+
+    So:
+    Without position: relative; on the <li>, the .mega-menu would try to position itself relative to the entire page, not under the right menu item.
+    That’s why your dropdown stays nicely attached to "Products" instead of flying off somewhere else.
+
+    3. Visual Example
+    Think of it like this:
+    position: relative; = “Hey, I am a parent anchor point.”
+    position: absolute; = “I’m a floating box. I’ll attach myself to the nearest parent anchor point.”
+    */
+
+    top: 100%;
+    /* Appears just below parent */
+    left: 0;
+    /* Aligns with left edge of parent */
+    width: 600px;
+    /* Wide dropdown panel */
+    background: #f6e66c;
+    /* White background */
+    padding: 20px;
+    /* Inner spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Adds soft shadow */
+
+    /* Layout setup for inside content */
+    display: none;
+    /* (again here to be clear - stays hidden until hover) */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal columns 
+    Step 1: Grid basics
+    When you set display: grid; on an element, it becomes a grid container.
+    Inside, its children (e.g., .mega-column) become grid items.
+    Then you can control how many columns, rows, and spacing it has.
+    
+    Step 2: grid-template-columns
+    This defines how many columns and how wide they should be.
+    Example:
+    grid-template-columns: 200px 200px 200px;
+    → 3 fixed columns, each 200px wide.
+
+    But fixed pixels are not flexible.
+    Step 3: Using fr (fraction unit)
+    fr means “fraction of the available space”.
+    Example:
+    1fr 1fr 1fr → 3 equal columns, each takes one-third of the width.
+    2fr 1fr → first column takes 2 parts, second column takes 1 part (so ⅔ vs ⅓).
+
+    Step 4: Using repeat()
+    Instead of writing 1fr 1fr 1fr, we can shorten it with repeat(3, 1fr).
+    This means: create 3 columns, each 1 fraction wide.
+    So:
+    grid-template-columns: repeat(3, 1fr);
+    = “Make a grid with 3 equal columns that stretch to fill the full width of .mega-menu.”
+    */
+    gap: 20px;
+    /* Space between columns 
+    Adds 20px spacing between grid items (both columns and rows).
+    Prevents the text and lists from touching each other.
+    */
+    z-index: 10;
+    /* Keep menu above everything else */
+}
+
+/* Show mega menu when hovering parent */
+.has-mega:hover .mega-menu {
+    display: grid;
+    /* Change from hidden to visible grid layout 
+    Selector: .has-mega:hover .mega-menu
+    This is actually three parts combined:
+    .has-mega
+    The dot (.) means "class selector".
+    This matches any element with the class has-mega.
+    In your HTML, that’s usually a <li class="has-mega">Products</li>.
+    :hover
+    This is a pseudo-class that applies when the user moves the mouse over the element.
+    So has-mega:hover = “When the user hovers over the <li class="has-mega">.”
+    .mega-menu
+    Another class selector.
+    Because it comes after a space, it means: “Find a descendant element with class mega-menu inside the hovered .has-mega.”
+    👉 Put together:
+    .has-mega:hover .mega-menu =
+    “When the user hovers over .has-mega, select the .mega-menu inside it.”
+
+    why grid?
+    Because your mega menu has multiple columns (grid-template-columns: repeat(3, 1fr);) of links (like 3 categories side by side).
+    grid makes it easy to say: “3 equal columns with spacing.”
+    Example from your CSS:
+    grid-template-columns: repeat(3, 1fr);
+    = 3 equal columns inside .mega-menu.
+
+    If you didn’t want to use grid, you could also use:
+    display: block;
+    → would just show the mega menu as one tall vertical list (not side-by-side columns).
+
+    display: flex;
+    → could create columns too, using flex-direction: row; (but less powerful for rows/columns combined).
+
+    display: inline-block;
+    → older way: make each column inline-block and style spacing manually.
+    */
+}
+
+/* ========= Mega Column Styles ======== */
+.mega-column h3 {
+    margin-bottom: 10px;
+    /* Space under heading */
+    font-size: 16px;
+    /* Normal size for column titles */
+    color: #333;
+    /* Dark text */
+}
+
+.mega-column ul {
+    list-style: none;
+    /* No bullets */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.mega-column ul li a {
+    color: #444;
+    /* Medium gray text */
+    text-decoration: none;
+    /* Remove underline */
+    display: block;
+    /* Entire line is clickable */
+    padding: 5px 0;
+    /* Space between links */
+    transition: color 0.3s;
+    /* Smooth hover color change */
+}
+
+/* Hover effect for links */
+.mega-column ul li a:hover {
+    color: #e63946;
+    /* Red on hover */
+}
