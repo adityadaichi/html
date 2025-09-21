@@ -1,0 +1,165 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* hrader */
+header {
+    background-color: #eeebec;
+    padding: 45px 0;
+}
+
+.header-logo,
+nav,
+li {
+    display: inline-block;
+}
+
+.width-center {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    width: 30%;
+}
+
+nav {
+    width: 69%;
+}
+
+nav ul {
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: rgb(0, 13, 255);
+}
+
+
+nav ul li {
+    margin-left: 50px;
+}
+
+/* hero section */
+.hero {
+    height: 660px;
+    background-color: #f8f8f8;
+    background-image: url(../images/bg-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.hero div {
+    position: absolute;
+    bottom: 60px;
+    right: 35%;
+    display: grid;
+    background-color: #ca315ad2;
+    height: 150px;
+    width: 150px;
+    place-items: center;
+    border-radius: 100%;
+    outline: 10px;
+    box-shadow: -18px 6px 0 0 #c8c10f;
+
+}
+
+.hero div h3 {
+    text-align: center;
+    width: 70px;
+    color: #ffffffee;
+    font-size: 25px;
+    ;
+
+}
+
+/* Section: new products */
+.new-product {
+    background-color: #eae7e8;
+}
+
+.left-content {
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+    margin-top: 70px;
+}
+
+.left-content h2 {
+    text-align: left;
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.left-content h3 {
+    text-align: left;
+    font-size: 30px;
+    color: #E32A62;
+    margin-bottom: 15px;
+}
+
+.left-content p {
+    text-align: left;
+    font-size: 14px;
+    color: #7a6666;
+}
+
+
+.image-right {
+    display: inline-block;
+    width: 34%;
+}
+
+/* 4 colum section */
+.four-column {
+    background-color: #c8c10d;
+    padding: 90px 0px;
+}
+
+.column {
+    text-align: center;
+    display: inline-block;
+    width: 24%;
+    color: #ffffff;
+
+}
+
+.column i {
+    margin-bottom: 25px;
+    font-size: 50px;
+
+}
+
+footer {
+    background-color: #cb3362;
+    height: 300px;
+    padding: 100px 0;
+}
+
+.width-center {
+    text-align: center;
+}
+
+.width-center i {
+    color: #f8f8f8;
+    margin: 0px 6px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}
