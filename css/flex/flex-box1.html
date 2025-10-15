@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box 1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 1px solid rgb(0 225 225);
+            /* width: 1000px; */
+            height: 70vh;
+            background-color: gray;
+            /* inline flex */
+            display: flex;
+            /* flex-direction: row; */
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+            /* align-content: center;
+            justify-content: center; */
+            gap: 10px;
+
+
+        }
+
+        .box {
+
+            /* flex-basis: 300px; */
+            width: 25%;
+            height: 200px;
+            font-size: 33px;
+            color: red;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bix1 {
+            order: 0;
+            /* flex-shrink: 5; */
+            /* flex-grow: 10; */
+            flex: 0 1 10vw;
+        }
+
+        .bix2 {
+            order: 1;
+            /* align-self: flex-end;  work on cross axsis*/
+        }
+
+        .bix3 {
+            order: 5;
+        }
+
+        .bix4 {
+            order: 3;
+            align-self: flex-start;
+        }
+
+        .bix5 {
+            order: 4;
+        }
+
+        .bix6 {
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box bix1">A</div>
+        <div class="box bix2">B</div>
+        <div class="box bix3">C</div>
+        <div class="box bix4">D</div>
+        <div class="box bix5">E</div>
+        <div class="box bix6">F</div>
+    </div>
+</body>
+
+</html>

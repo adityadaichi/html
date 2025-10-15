@@ -1,0 +1,59 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-title: #c8c10d;
+
+}
+
+/* hrader */
+header {
+    background-color: #eeebec;
+    padding: 45px 0;
+}
+
+.header-logo,
+nav,
+li {
+    display: inline-block;
+}
+
+.width-center {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header-logo {
+    width: 30%;
+}
+
+nav {
+    width: 69%;
+}
+
+nav ul {
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: rgb(0, 13, 255);
+}
+
+nav a:active {
+    color: red;
+}
+
+
+nav ul li {
+    margin-left: 50px;
+}

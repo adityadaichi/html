@@ -1,0 +1,21 @@
+footer {
+    background-color: #cb3362;
+    height: 300px;
+    padding: 100px 0;
+}
+
+footer .width-center {
+    text-align: center;
+}
+
+.width-center i {
+    color: #f8f8f8;
+    margin: 0px 6px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+}
