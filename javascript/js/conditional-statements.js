@@ -67,7 +67,8 @@ switch (math) {
     default:
         console.log("No Action")
 }
-       
+ */
+/*      
 
 // Trafic light
 const traficLight = prompt("Enter trafic light")
@@ -84,21 +85,80 @@ switch (traficLight) {
     deloult:
         console.log (No Signal found);
 }
-         */
+*/
 
+/*
 const apiStatus = prompt("Enter Https status code")
 switch (apiStatus) {
     case "200":
         console.log("Success");
         break;
-    case "300":
-        console.log("Redirection");
+        case "300":
+            console.log("Redirection");
+            break;
+            case "400":
+                console.log("Bad request");
+                case "500":
+                    console.log("Server Error")
+                    break;
+                    default:
+                        console.log("No API Responce");
+                    }
+
+ */
+/*
+const paymentType = prompt("Choose your - Payment Type");
+switch (paymentType) {
+    case "UPI":
+        alert("Click on 'OK' to Enter your UPI ID");
+        prompt("Enter UPI ID")
         break;
-    case "400":
-        console.log("Bad request");
-    case "500":
-        console.log("Server Error")
+    case "Net Nanking":
+        alert("Slect your Bank");
+        break;
+    case "Wallet":
+        alert("Choose your Wallet");
+        break;
+    case "COD":
+        alert("Thanks for chooseing COD, Order confirmed");
+    default:
+        alert("No payment method found");
+}
+
+*/
+/*
+const pageBackground = prompt("Select color theme");
+switch (pageBackground) {
+    case "Light":
+        alert("Light Mode");
+        break;
+    case "Dark":
+        alert("Dark Mode");
+    default:
+        alert("Auto Select as per System");
+}
+
+*/
+const httpMethod = prompt("Enter HTTPs Request Methods");
+switch (httpMethod) {
+    case "GET":
+        alert("To retrieve data from the server.");
+        break;
+    case "POST":
+        alert("To send new data to the server for creation");
+        break;
+    case "PUT":
+        alert("To completely update or replace existing data on the server.");
+        break;
+    case "PATCH":
+        alert("To partially update existing data on the server.");
+        break;
+    case "DELETE":
+        alert(" – To remove data from the server.");
+        break;
+    case "UPDATE":
+        alert("Not an official HTTP method (use PUT or PATCH instead).");
         break;
     default:
-        console.log("No API Responce");
+        alert("Method not found");
 }
